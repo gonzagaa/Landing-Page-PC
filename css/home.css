@@ -1,0 +1,173 @@
+:root {
+    font-size: 62.5%;
+
+    --primary-color: #0a0a0a;
+    --color-text: #d8d8d8;
+    --paragraphy-color: #757575;
+
+    --gradient-black: linear-gradient(to left bottom, #171717, #0a0a0a, #0b0b0b, #0c0c0c, #161616);
+
+    --gradient-white: linear-gradient(to left bottom, #bdbaba, #f0f0f0, #f1f1f1, #f4f4f4, #b1b1b1);
+
+    --text-gradient-black: linear-gradient(to right, #111111, #929292 100%);
+    --text-gradient-white: linear-gradient(to right, #d8d8d8, #484848 100%);
+
+
+    --nav-height: 7.2rem;
+}
+
+/* HOME =================== */
+#home {
+    overflow: hidden;
+    min-height: 100vh;
+
+    padding-block: 3rem;
+
+    position: relative;
+    background: var(--gradient-black);
+}
+
+#home .content {
+    z-index: 2;
+
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    text-align: left;
+    gap: 5rem;
+}
+
+#home .image img {
+    width: 100%;
+}
+
+#home .content h1 {
+    font-size: 4.5rem;
+    line-height: 1.2;
+    font-weight: 600;
+    
+    background: var(--text-gradient-white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    margin-bottom: 1rem;
+}
+
+
+#home .content h2 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    color: var(--paragraphy-color);
+}
+
+#home .topics .topic {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    margin-bottom: .5rem;
+}
+
+#home .topics .topic ion-icon {
+    font-size: 2rem;
+    color: var(--color-text);
+}
+
+#home .topics .topic p {
+    font-weight: 700;
+    font-size: 1.6rem;
+    background: var(--text-gradient-white);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#home a button {
+    margin-top: 2rem;
+    border: none;
+    background: var(--gradient-white);
+    color: var(--primary-color);
+    padding: 1rem 3rem;
+    border-radius: 1rem;
+    font-size: 1.6rem;
+
+    transition: all 200ms ease-in-out;
+}
+
+#home a button:hover {
+    cursor: pointer;
+    box-shadow: 1px 1px 10px #424242;
+}
+
+@media (min-width: 1080px) {  
+    header#home {
+        height: 90vh;
+        padding-block: initial;
+    }
+ 
+    header#home .content {
+        height: 90vh;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+
+    header#home .wrapper .text {
+        margin-top: initial;
+    }
+
+    header#home .wrapper .content h1 {
+        font-size: 9rem;
+        line-height: 1.2;
+    }
+
+    header#home .wrapper .content h2 {
+        font-size: 3rem;
+    }
+
+    header#home .wrapper .topics .topic ion-icon {
+        font-size: 3rem;
+    }
+    
+    header#home .wrapper .topics .topic p {
+        font-size: 2rem;
+    }
+
+    header#home a button {
+        font-size: 2rem;
+    }
+
+}
+   
+
+@media (min-width: 1200px) {
+    .wrapper {
+      width: min(130rem, 100%);
+    }
+  }
+
+  @media (min-width: 1400px) {
+    .wrapper {
+      width: min(150rem, 100%);
+    }
+
+    :root {
+      font-size: 65%;
+    }
+  }
+
+  @media (min-width: 1700px) {
+    .wrapper {
+      width: min(160rem, 100%);
+    }
+  }
+
+  @media (min-width: 2000px) {
+    .wrapper {
+      width: min(180rem, 100%);
+    }
+  }
