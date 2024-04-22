@@ -1,0 +1,75 @@
+#apresentacao {
+    overflow: hidden;
+    position: relative;
+}
+
+#apresentacao video.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+
+    filter: brightness(.2);
+}
+
+#apresentacao::before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to left bottom, #171717, #0a0a0a, #0b0b0b, #0c0c0c, #161616);
+}
+
+#apresentacao .content {
+    position: relative;
+    z-index: 3;
+}
+
+#apresentacao .video video {
+    width: 100%;
+    border: 2px solid #fff;
+}
+
+@media (min-width: 1080px) {
+    .wrapper {
+      width: min(112rem, 100%);
+    }
+
+    section#apresentacao::before {
+        background: initial;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .wrapper {
+      width: min(130rem, 100%);
+    }
+  }
+
+  @media (min-width: 1400px) {
+    .wrapper {
+      width: min(150rem, 100%);
+    }
+
+    :root {
+      font-size: 65%;
+    }
+  }
+
+  @media (min-width: 1700px) {
+    .wrapper {
+      width: min(160rem, 100%);
+    }
+  }
+
+  @media (min-width: 2000px) {
+    .wrapper {
+      width: min(180rem, 100%);
+    }
+  }
